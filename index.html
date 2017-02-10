@@ -1,0 +1,17 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <title>hannah node chat</title>
+  </head>
+  <body>
+    <h1>hannah node chat</h1>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+      var socket = io.connect('http://localhost:8000');
+      socket.emit("news",{news:"news"});
+      socket.on('other event', function (data) {
+        console.log(data);
+      });
+    </script>
+  </body>
+</html>
